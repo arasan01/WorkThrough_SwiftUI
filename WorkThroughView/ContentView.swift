@@ -9,8 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(1..<100) { index in
+                NavigationLink(destination: Text("Number \(index) in TRIVIA")) {
+                    Text("\(index)")
+                }
+            }
+            .navigationBarTitle("Any Content", displayMode: .inline)
+            .navigationBarItems(
+                trailing: Button(action: {}, label: {
+                    Image(systemName: "magnifyingglass")
+                        .font(.headline)
+                })
+            )
+        }
     }
 }
 

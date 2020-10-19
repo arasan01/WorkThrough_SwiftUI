@@ -11,7 +11,7 @@ import SwiftUI
 struct WorkThroughViewApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
