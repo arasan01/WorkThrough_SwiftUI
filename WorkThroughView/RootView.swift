@@ -11,9 +11,7 @@ struct RootView: View {
     @AppStorage("isFirstLaunch") var isFirstLaunch = true
     var body: some View {
         ContentView()
-            .sheet(isPresented: $isFirstLaunch, onDismiss: {
-                isFirstLaunch = false
-            }) {
+            .sheet(isPresented: $isFirstLaunch) {
                 WorkThroughView()
             }
     }
